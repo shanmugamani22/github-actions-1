@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '18'
       - name: install dependencies
-        run:  npm ci
+        run:  npm install
       - name: Run tests
         run: npm test
   deploy:
@@ -32,7 +32,7 @@ jobs:
         with:
           node-version: '18'
       - name: install dependencies
-        run:  npm ci
+        run:  npm install
       - name: Deploy Application
         run: |
           echo "Deploying Application..."
