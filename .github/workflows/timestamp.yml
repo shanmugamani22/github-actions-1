@@ -1,0 +1,10 @@
+name: Timestamp
+on:
+  schedule:
+    - cron: '0 * * * *'
+jobs:
+  timestamp_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get current timestamp
+        run: echo "Current timestamp: $(date)"
