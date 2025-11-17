@@ -19,8 +19,8 @@ jobs:
           node-version: '16'
       - name: install dependencies
         run: |
-            npm install
             npm audit fix
+            npm install
       - name: Run tests
         run: npm test
   deploy:
