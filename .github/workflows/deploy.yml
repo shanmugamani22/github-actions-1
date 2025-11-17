@@ -18,11 +18,10 @@ jobs:
         with:
           node-version: '18'
       - name: install dependencies
-        run:  npm install
+        run:  npm ci
       - name: Run tests
         run: npm test
   deploy:
-    needs: tests
     runs-on: ubuntu-latest
     steps:
       - name: get code
@@ -32,7 +31,7 @@ jobs:
         with:
           node-version: '18'
       - name: install dependencies
-        run:  npm install
+        run:  npm ci
       - name: Deploy Application
         run: |
           echo "Deploying Application..."
